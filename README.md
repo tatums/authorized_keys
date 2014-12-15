@@ -1,6 +1,6 @@
 # AuthorizedKeys
 
-TODO: Write a gem description
+Pull public ssh keys from a github team and write them to an authorized_keys file. This is good for granting access to a server.
 
 ## Installation
 
