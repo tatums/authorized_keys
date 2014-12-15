@@ -6,7 +6,7 @@ Pull public ssh keys from a github team and write them to an authorized_keys fil
 
 Add this line to your application's Gemfile:
 
-```ruby
+```
 gem 'authorized_keys'
 ```
 
@@ -18,9 +18,52 @@ Or install it yourself as:
 
     $ gem install authorized_keys
 
+
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+AuthorizedKeys.configure do |c| 
+    c.org_name = "AwesomeOrg"
+    c.auth_token="asdfasdf12341234123412341234"; 
+    c.team_ids = [123456, 123457]; 
+    c.file_path = "/home/ubuntu/.ssh/authorized_keys" 
+end
+```
+
+Assuming your config is valid.  The go method will write all keys to the file specified in the config
+
+```ruby
+AuthorizedKeys.go
+=> "success™"
+```
+
+## Examples
+```ruby
+pry(main)> require "./lib/authorized_keys"
+=> true
+```
+
+
+
+### AuthorizedKeys::Org
+```ruby
+AuthorizedKeys::Org.details
+AuthorizedKeys::Org.teams
+```
+
+### AuthorizedKeys::Team
+```ruby
+AuthorizedKeys::Team.new(id: 687081).details
+AuthorizedKeys::Team.new(id: 687081).members
+AuthorizedKeys::Team.new(id: 687081).keys
+```
+
+### AuthorizedKeys::Member
+```ruby
+AuthorizedKeys::Member.new(id: 72979).details
+AuthorizedKeys::Member.new(id: 72979).keys
+```
+
 
 ## Contributing
 
