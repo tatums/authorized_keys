@@ -1,4 +1,4 @@
-module AuthorizedKeys
+module AuthKeys
   class Member
     include Virtus.model
     attribute :id, Integer

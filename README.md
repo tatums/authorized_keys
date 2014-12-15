@@ -1,4 +1,4 @@
-# AuthorizedKeys
+# AuthKeys
 
 Pull public ssh keys from a github team and write them to an authorized_keys file. This is good for granting access to a server.
 
@@ -22,18 +22,18 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-AuthorizedKeys.configure do |c| 
+AuthKeys.configure do |c|
     c.org_name = "AwesomeOrg"
-    c.auth_token="asdfasdf12341234123412341234"; 
-    c.team_ids = [123456, 123457]; 
-    c.file_path = "/home/ubuntu/.ssh/authorized_keys" 
+    c.auth_token="asdfasdf12341234123412341234";
+    c.team_ids = [123456, 123457];
+    c.file_path = "/home/ubuntu/.ssh/authorized_keys"
 end
 ```
 
 Assuming your config is valid.  The go method will write all keys to the file specified in the config
 
 ```ruby
-AuthorizedKeys.go
+AuthKeys.go
 => "success™"
 ```
 
@@ -45,23 +45,23 @@ pry(main)> require "./lib/authorized_keys"
 
 
 
-### AuthorizedKeys::Org
+### AuthKeys::Org
 ```ruby
-AuthorizedKeys::Org.details
-AuthorizedKeys::Org.teams
+AuthKeys::Org.details
+AuthKeys::Org.teams
 ```
 
-### AuthorizedKeys::Team
+### AuthKeys::Team
 ```ruby
-AuthorizedKeys::Team.new(id: 687081).details
-AuthorizedKeys::Team.new(id: 687081).members
-AuthorizedKeys::Team.new(id: 687081).keys
+AuthKeys::Team.new(id: 687081).details
+AuthKeys::Team.new(id: 687081).members
+AuthKeys::Team.new(id: 687081).keys
 ```
 
-### AuthorizedKeys::Member
+### AuthKeys::Member
 ```ruby
-AuthorizedKeys::Member.new(id: 72979).details
-AuthorizedKeys::Member.new(id: 72979).keys
+AuthKeys::Member.new(id: 72979).details
+AuthKeys::Member.new(id: 72979).keys
 ```
 
 

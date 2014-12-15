@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'authorized_keys/version'
+require 'auth_keys/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "authorized_keys"
-  spec.version       = AuthorizedKeys::VERSION
+  spec.name          = "auth_keys"
+  spec.version       = AuthKeys::VERSION
   spec.authors       = ["tatums"]
   spec.email         = ["tatum@ashlandstudios.com"]
   spec.summary       = %q{Give a github team access to the server.}

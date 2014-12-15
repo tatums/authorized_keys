@@ -1,4 +1,4 @@
-module AuthorizedKeys
+module AuthKeys
   class << self
     attr_writer :configuration
   end

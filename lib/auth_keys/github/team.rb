@@ -1,11 +1,11 @@
-module AuthorizedKeys
+module AuthKeys
   class Team
     include Virtus.model
     attribute :id, Integer
     attribute :name, String
 
     def self.all
-      Request.get("https://api.github.com/orgs/#{AuthorizedKeys.config.org_name}/teams").map do |attr|
+      Request.get("https://api.github.com/orgs/#{AuthKeys.config.org_name}/teams").map do |attr|
         self.new(attr)
       end
     end
@@ -24,7 +24,7 @@ module AuthorizedKeys
 
     def keys
       members.map do |m|
-        puts "Key found for #{m.login}" if AuthorizedKeys.config.verbose
+        puts "Key found for #{m.login}" if AuthKeys.config.verbose
         m.keys.map { |k| "#{k["key"]} #{m.login}" }
       end.flatten
     end

@@ -1,4 +1,4 @@
-module AuthorizedKeys
+module AuthKeys
   class Config
     attr_accessor :org_name, :auth_token, :team_ids, :file_path, :verbose
 
