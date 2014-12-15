@@ -6,7 +6,7 @@ require 'authorized_keys/version'
 Gem::Specification.new do |spec|
   spec.name          = "authorized_keys"
   spec.version       = AuthorizedKeys::VERSION
-  spec.authors       = ["tatumszymczak"]
+  spec.authors       = ["tatums"]
   spec.email         = ["tatum@ashlandstudios.com"]
   spec.summary       = %q{Give a github team access to the server.}
   spec.description   = %q{A gem to help you grant ssh access to a server. Writes ssh keys to the authorized_keys file.}
