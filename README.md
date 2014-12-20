@@ -7,7 +7,7 @@ Pull public ssh keys from a github team and write them to an authorized_keys fil
 Add this line to your application's Gemfile:
 
 ```
-gem 'authorized_keys'
+gem 'auth_keys'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install authorized_keys
+    $ gem install auth_keys
 
 
 ## Usage
